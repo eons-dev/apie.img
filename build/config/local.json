@@ -13,7 +13,7 @@
                 },
                 "install":[],
                 "also" : [
-                    "pip install apie"
+                    "RUN pip install apie"
                 ],
                 "tags" : [
                     "latest"
