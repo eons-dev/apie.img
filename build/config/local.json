@@ -8,6 +8,7 @@
                 "base_image": "eons/base.img",
                 "image_name": "eons/apie.img",
                 "image_os": "alpine",
+                "entrypoint" : "/launch",
                 "launch" : {
                     "apie" : "python -m apie -c /etc/apie"
                 },
