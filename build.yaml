@@ -1,0 +1,23 @@
+build_in: build
+type: img
+name: apie.img
+clear_build_path: true
+next:
+- build: docker
+	build_in: docker
+	config:
+		base_image: eons/base.img
+		image_name: eons/apie.img
+		image_os: debian
+		also:
+		- RUN pip install apie
+		launch:
+			apie: python -m apie -c /etc/apie/config
+		tags: 
+		- latest
+- build: docker_publish
+	run_when_any:
+	- release
+	build_in: publish
+	config:
+		image_name: eons/apie.img
