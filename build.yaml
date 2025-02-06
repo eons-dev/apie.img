@@ -12,8 +12,8 @@ next:
 		also:
 		- RUN pip install apie
 		launch:
-			apie: python -m apie -c /etc/apie/config
-		tags: 
+			apie: python -m apie -c /etc/apie/config.yaml
+		tags:
 		- latest
 - build: docker_publish
 	run_when_any:
